@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fleet_rental_driver_inherit" model="ir.ui.view">
+        <field name="name">Vehicle Driver</field>
+        <field name="model">car.rental.contract</field>
+        <field name="inherit_id" ref="fleet_rental.car_rental_contract_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name ='vehicle_id']" position="after">
+                <field name="driver_option" widget="radio"/>
+                <field name="drivers_id"  attrs="{'invisible':[('driver_option', '=', 'Vehicle_only')]}"/>
+                <field name="driver_wage" attrs="{'invisible':[('driver_option', '=', 'Vehicle_only')]}"/>
+
+
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Driver's Payment" name="Driver's payment">
+                    <group>
+                        <group>
+
+                            <field name="drivers_id" attrs="{'invisible':[('driver_option', '=', 'Vehicle_only')]}"/>
+
+
+                            <field name="driver_wage" attrs="{'invisible':[('driver_option', '=', 'Vehicle_only')]}"/>
+                        </group>
+
+                    </group>
+                    <field name="payment_ids">
+                        <tree editable="bottom">
+                            <field name="date"/>
+                            <field name="driver_id"/>
+                            <field name="t_salary"/>
+                        </tree>
+                    </field>
+                    <group name="note_group" col="6" class="mt-2 mt-md-0">
+                        <group colspan="4">
+                        </group>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="Total_Salary">
+                            <field name="total_salary" attrs="{'invisible':[('driver_option', '=', 'Vehicle_only')]}" widget='monetary'/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

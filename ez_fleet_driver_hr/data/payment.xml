@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+            <record id="ir_cron_driver_payment" model="ir.cron">
+                <field name="name">Driver payment</field>
+                <field name="model_id" ref="fleet_rental.model_car_rental_contract"/>
+                <field name="state">code</field>
+                <field name="code">model.driver_payment()</field>
+                <field name="active" eval="True"/>
+                <field name="interval_number">1</field>
+                <field name="interval_type">days</field>
+                <field name="numbercall">-1</field>
+            </record>
+        </data>
+</odoo>
