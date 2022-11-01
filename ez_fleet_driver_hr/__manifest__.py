@@ -1,9 +1,9 @@
 {
     'name': 'Fleet Driver Management',
     'version': '14.0.0.1.0',
-    'summary': 'Fleet driver monitoring with HR Attendance And Payments',
+    'summary': 'Fleet driver management with HR Attendance And Payments',
     'sequence': 10,
-    'description': """Fleet driver monitoring with HR Attendance,This module required Cybrosys Fleet Rental Addon.""",
+    'description': """Fleet driver track with HR Attendance""",
     'category': 'Industries',
     'author': 'Euclidz',
     'maintainer': 'Euclidz',
