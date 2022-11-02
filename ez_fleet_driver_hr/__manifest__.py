@@ -6,7 +6,7 @@
     'description': """Fleet driver track with HR Attendance""",
     'category': 'Industries',
     'author': 'Euclidz',
-    'maintainer': 'Euclidz',
+    'maintainer': 'Euclidz Technologies',
     'company': 'Euclidz',
     'website': 'https://euclidz.ai/',
     'license': 'AGPL-3',
